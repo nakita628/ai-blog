@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+cache
+.cursor
+copilot-instructions.md
+.DS_Store
+dist
