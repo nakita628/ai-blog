@@ -4,6 +4,7 @@
     "ignoreUnknown": true,
     "includes": [
       "**/*.ts",
+      "**/*.mts",
       "**/*.vue",
       "**/*.json",
       "!**/.pnpm-store/**",
