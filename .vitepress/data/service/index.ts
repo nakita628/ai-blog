@@ -1,9 +1,9 @@
-import type { Post } from '../../types'
-import matter from 'gray-matter'
-import path from 'node:path'
-import { buildPost, relativeMd, fileFilter, isMarkdownFile } from '../utils'
-import { BASE_DIR } from '../constants'
 import fs from 'node:fs'
+import path from 'node:path'
+import matter from 'gray-matter'
+import type { Post } from '../../types'
+import { BASE_DIR } from '../constants'
+import { buildPost, fileFilter, isMarkdownFile, relativeMd } from '../utils'
 
 export function parseFileToPost(filePath: string): Post {
   const content = fs.readFileSync(filePath, 'utf-8')

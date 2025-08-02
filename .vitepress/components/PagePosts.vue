@@ -3,8 +3,8 @@ import type { Ref } from 'vue'
 import { ref } from 'vue'
 
 import { getPosts } from '../hooks/postsHooks.ts'
-import Pagination from './Page/Pagination.vue'
 import type { Post } from '../types.ts'
+import Pagination from './Page/Pagination.vue'
 
 const props = defineProps({
   page: {

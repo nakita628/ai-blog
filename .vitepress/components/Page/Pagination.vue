@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import type { Post } from '../../types'
 import Posts from '../Posts/Posts.vue'
 
