@@ -1,16 +1,12 @@
 import type { Matter, Post } from '../../types'
 
-export function buildLink(path: string, str: string): string {
-  return `${path}${str}`
-}
-
 export function buildPost(matter: Matter, link: string): Post {
   return {
     title: matter.title,
     description: matter.description,
     date: formatDate(matter.date),
     tags: matter.tags,
-    link: buildLink('/ai-blog/posts/', link),
+    link: `/ai-blog/posts/${link}`,
   }
 }
 

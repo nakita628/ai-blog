@@ -1,18 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { buildLink, buildPost, fileFilter, formatDate, isMarkdownFile, relativeMd } from '.'
+import { buildPost, fileFilter, formatDate, isMarkdownFile, relativeMd } from '.'
 
 // Test run
 // npx vitest run .vitepress/data/utils/index.test.ts
 
 describe('utils Test', () => {
-  describe('buildLink Test', () => {
-    it('buildLink("/ai-blog/posts/", "1") -> /ai-blog/posts/1', () => {
-      const input = buildLink('/ai-blog/posts/', '1')
-      const expected = '/ai-blog/posts/1'
-      expect(input).toBe(expected)
-    })
-  })
-
   describe('buildPost Test', () => {
     it('buildPost($matter, $link)', () => {
       const result = buildPost(
