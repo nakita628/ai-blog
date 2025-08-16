@@ -7,12 +7,12 @@ import { h } from 'vue'
 import 'virtual:group-icons.css'
 import './style.css'
 
-import NewPosts from '../components/NewPosts.vue'
-import PagePosts from '../components/PagePosts.vue'
-import PageTags from '../components/PageTags.vue'
-import Tags from '../components/Tags.vue'
-import X from '../components/X.vue'
-import YouTube from '../components/YouTube.vue'
+import NewPosts from '../features/NewPosts.vue'
+import PagePosts from '../features/PagePosts.vue'
+import PageTags from '../features/PageTags.vue'
+import Tags from '../features/Tags.vue'
+import X from '../features/X.vue'
+import YouTube from '../features/YouTube.vue'
 
 export default {
   extends: DefaultTheme,

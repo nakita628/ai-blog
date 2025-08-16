@@ -7,9 +7,7 @@ import { postsAction } from './data/action/posts-action'
 import { tagsAction } from './data/action/tags-action'
 import type { Post } from './types'
 
-// posts
 export const posts: Post[] = postsAction()
-// tags
 export const tags: string[] = tagsAction()
 
 const items = [
@@ -25,7 +23,7 @@ export default withMermaid(
     title: "AI's Blog",
     description: "AI's Blog",
     base: '/ai-blog/',
-    // head: [["link", { rel: "icon", type: "image/svg+xml", href: "n.svg" }]],
+    // head: [["link", { rel: "icon", type: "image/svg+xml", href: "*.svg" }]],
     appearance: 'force-auto',
     markdown: {
       config(md) {

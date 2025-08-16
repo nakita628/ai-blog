@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import type { Post } from '../../types'
-import Posts from '../Posts/Posts.vue'
 
 const { posts, baseUrl, page } = defineProps<{
   posts: Post[]
@@ -9,7 +8,7 @@ const { posts, baseUrl, page } = defineProps<{
   page: number
 }>()
 
-const PER_PAGE = 20
+const PER_PAGE = 20 as const
 
 const current = ref(page || 1)
 const asc = ref(false)
@@ -32,7 +31,13 @@ const pageLink = (p: number) => `${baseUrl}/page/${p}`
     </a>
   </div>
 
-  <Posts v-for="post in viewPosts" :key="post.link" :post="post" />
+  <div v-for="post in viewPosts" :key="post.link" class="border-b border-gray-600">
+    <p>{{ post.date }}</p>
+    <a :href="post.link" class="!no-underline">
+      {{ post.title }} 
+    </a>
+    <p>{{ post.description }}</p>
+  </div>
 
   <div class="flex justify-between items-center mt-4">
     <a v-if="current > 1" :href="pageLink(current - 1)" class="!no-underline">← Prev</a>

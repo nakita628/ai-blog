@@ -13,9 +13,9 @@ const props = defineProps({
   },
 })
 
-const _posts: Ref<Post[]> = ref(getPosts())
+const posts: Ref<Post[]> = ref(getPosts())
 </script>
 
 <template>
-    <Pagination baseUrl="/ai-blog/posts" :posts="_posts" :page="props.page" />
+    <Pagination baseUrl="/ai-blog/posts" :posts="posts" :page="props.page" />
 </template>
