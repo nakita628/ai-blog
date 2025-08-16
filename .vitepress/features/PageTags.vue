@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import Pagination from '../components/Pagination.vue'
 import { getPosts } from '../hooks/postsHooks.ts'
-import Pagination from './Page/Pagination.vue'
 
 const props = defineProps({
   tag: {
