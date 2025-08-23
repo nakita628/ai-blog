@@ -1,0 +1,164 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* 1. Color System -------------------------------------------------- */
+:root {
+  /* Neutrals */
+  --vp-white: #ffffff;
+  --vp-black: #0d1117;
+
+  /* Brand gradient */
+  --vp-indigo: #6366f1;
+  --vp-cyan:   #22d3ee;
+  --vp-neon:   #3afc8b;
+
+  /* Surfaces */
+  --vp-surface-1: rgba(13,17,23,0.6);   /* glass dark */
+  --vp-surface-2: rgba(255,255,255,0.4); /* glass light */
+
+  /* Typography */
+  --vp-text-1-light: #0f172a;
+  --vp-text-2-light: #475569;
+  --vp-text-1-dark:  #f8fafc;
+  --vp-text-2-dark:  #cbd5e1;
+
+  /* Code */
+  --vp-code-bg-light: #f1f5f9;
+  --vp-code-bg-dark:  #1e293b;
+  --vp-code-border:   rgba(255,255,255,0.08);
+
+  /* Rings */
+  --vp-ring: 0 0 0 2px var(--vp-neon);
+}
+
+/* 2. Typography ---------------------------------------------------- */
+@layer base {
+  html {
+    font-family: 'InterVariable', ui-sans-serif, system-ui;
+    font-size: clamp(14px, 0.85vw + 0.5rem, 18px);
+    line-height: 1.65;
+  }
+
+  pre,
+  code,
+  kbd,
+  samp {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+}
+
+/* 3. Utilities ----------------------------------------------------- */
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(90deg, var(--vp-indigo) 0%, var(--vp-cyan) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    backdrop-filter: blur(12px) saturate(180%);
+    background-color: var(--vp-surface-2);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 1rem;
+  }
+
+  .neon-border {
+    position: relative;
+  }
+  .neon-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(130deg, var(--vp-indigo), var(--vp-neon), var(--vp-cyan));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    animation: borderRotate 6s linear infinite;
+  }
+
+  @keyframes borderRotate {
+    to { transform: rotate(1turn); }
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite alternate;
+  }
+
+  @keyframes float {
+    0%   { transform: translateY(-4px); }
+    100% { transform: translateY(4px);  }
+  }
+}
+
+/* 4. Code Blocks --------------------------------------------------- */
+:root {
+  --vp-code-block-bg: var(--vp-code-bg-light);
+  --vp-code-block-color: var(--vp-text-1-light);
+}
+.dark {
+  --vp-code-block-bg: var(--vp-code-bg-dark);
+  --vp-code-block-color: var(--vp-text-1-dark);
+}
+
+pre[class*='language-'] {
+  background: var(--vp-code-block-bg);
+  color: var(--vp-code-block-color);
+  border: 1px solid var(--vp-code-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+/* Highlight lines */
+pre[data-line] .highlighted {
+  background: linear-gradient(90deg, transparent, rgba(34,211,238,0.12) 40%, transparent 80%);
+  border-left: 3px solid var(--vp-cyan);
+}
+
+/* 5. Scrollbar ----------------------------------------------------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-indigo) transparent;
+}
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--vp-indigo);
+  border-radius: 4px;
+}
+
+/* 6. Focus Ring ---------------------------------------------------- */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--vp-ring);
+}
+
+/* 7. Dark Mode overrides ------------------------------------------ */
+.dark {
+  --vp-c-bg: var(--vp-black);
+  --vp-c-bg-soft: #161b22;
+  --vp-c-bg-alt: #0d1117;
+
+  --vp-c-text-1: var(--vp-text-1-dark);
+  --vp-c-text-2: var(--vp-text-2-dark);
+
+  --vp-c-brand: var(--vp-indigo);
+  --vp-c-brand-light: var(--vp-cyan);
+  --vp-c-brand-lighter: var(--vp-neon);
+  --vp-c-brand-darker: #4f46e5;
+  --vp-c-brand-dark:   #2563eb;
+
+  --vp-c-mute: #161b22;
+}
+
+/* 8. Hero image override ------------------------------------------ */
+@media (max-width: 960px) {
+  .VPHero .image.floating:not(:has(.kawaii)) {
+    display: none;
+  }
+}

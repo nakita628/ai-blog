@@ -1,0 +1,35 @@
+{
+  "name": "ai-blog",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "npx biome check --write ./",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "dev": "vitepress dev --host",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@braintree/sanitize-url": "^7.1.0",
+    "@types/markdown-it-plantuml": "^1.4.5",
+    "@types/node": "^22.14.0",
+    "@vitest/coverage-v8": "^3.1.1",
+    "autoprefixer": "^10.4.20",
+    "cytoscape": "^3.30.3",
+    "cytoscape-cose-bilkent": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "debug": "^4.3.7",
+    "gray-matter": "^4.0.3",
+    "markdown-it-plantuml": "^1.4.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.6.1",
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "vitepress-plugin-tabs": "^0.7.1",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.17"
+  }
+}
