@@ -10,7 +10,7 @@ export function buildPost(matter: Matter, link: string): Post {
   }
 }
 
-export function formatDate(dateStr: string): string {
+export function formatDate(dateStr: string): `${string}-${string}-${string}` {
   const date = new Date(dateStr)
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0')

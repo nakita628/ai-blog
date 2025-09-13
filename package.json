@@ -11,7 +11,7 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.0",
+    "@biomejs/biome": "^2.2.4",
     "@braintree/sanitize-url": "^7.1.0",
     "@types/markdown-it-plantuml": "^1.4.5",
     "@types/node": "^22.14.0",

@@ -1,4 +1,4 @@
-import { getAllMarkdownFiles, parseFileToPost } from '../service'
+import { getAllMarkdownFiles, parseFileToPost } from '../services'
 
 export function tagsAction(): string[] {
   try {

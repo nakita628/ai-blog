@@ -1,16 +1,16 @@
 export type Post = {
-  title: string
-  description: string
-  date: string
-  tags: string[]
-  link: string
+  readonly title: string
+  readonly description: string
+  readonly date: string
+  readonly tags: string[]
+  readonly link: string
 }
 
 export type Matter = {
-  title: string
-  description: string
-  date: string
-  tags: string[]
-  prev?: boolean | { text: string; link: string }
-  next?: boolean | { text: string; link: string }
+  readonly title: string
+  readonly description: string
+  readonly date: string
+  readonly tags: string[]
+  readonly prev?: boolean | { readonly text: string; readonly link: string }
+  readonly next?: boolean | { readonly text: string; readonly link: string }
 }
