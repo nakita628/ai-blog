@@ -37,12 +37,13 @@ export default withMermaid(
         __POSTS__: posts,
         __TAGS__: tags,
       },
-      build: {
-        rollupOptions: {
-          external: ['/tags/[tag]/page/[page].md'],
-        },
-      },
       plugins: [groupIconVitePlugin()],
+      optimizeDeps: {
+        include: ['vitepress-plugin-tabs'],
+      },
+      ssr: {
+        noExternal: ['vitepress-plugin-tabs'],
+      },
     },
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
