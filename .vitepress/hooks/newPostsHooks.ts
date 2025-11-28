@@ -1,9 +1,9 @@
 import type { Post } from '../types'
 
-declare const __POSTS__: Post[]
+declare const __POSTS__: readonly Post[]
 
 export const getNewPosts = (num: number) => {
-  const posts = __POSTS__
-  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  return posts.slice(0, num)
+  return [...__POSTS__]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, num)
 }

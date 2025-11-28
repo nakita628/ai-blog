@@ -12,7 +12,7 @@ const props = defineProps({
   },
 })
 
-const posts: Ref<Post[]> = ref(getPosts())
+const posts: Ref<readonly Post[]> = ref(getPosts())
 </script>
 
 <template>

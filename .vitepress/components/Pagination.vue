@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import type { Post } from '../types'
 
 const { posts, baseUrl, page } = defineProps<{
-  posts: Post[]
+  posts: readonly Post[]
   baseUrl: string
   page: number
 }>()
