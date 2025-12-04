@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as i,a7 as n}from"./chunks/framework.DjJG9O-w.js";const p=JSON.parse('{"title":"AI Blog","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","filePath":"README.md"}'),o={name:"README.md"};function r(l,e,s,c,h,d){return i(),t("div",null,[...e[0]||(e[0]=[n("",10)])])}const b=a(o,[["render",r]]);export{p as __pageData,b as default};
