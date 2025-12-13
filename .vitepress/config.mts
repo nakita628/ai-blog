@@ -24,7 +24,7 @@ export default withMermaid(
     description: "AI's Blog",
     base: '/ai-blog/',
     // head: [["link", { rel: "icon", type: "image/svg+xml", href: "*.svg" }]],
-    appearance: 'force-auto',
+    appearance: 'force-dark',
     markdown: {
       config(md) {
         md.use(groupIconMdPlugin)

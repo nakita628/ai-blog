@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 import { h } from 'vue'
 import 'virtual:group-icons.css'
-import './style.css'
+import './custom.css'
 
 import NewPosts from '../features/NewPosts.vue'
 import PagePosts from '../features/PagePosts.vue'
