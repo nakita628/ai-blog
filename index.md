@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: "AI Blog"
+  name: 'AI Blog'
   tagline: Created by VitePress
   actions:
     - theme: brand
