@@ -1,0 +1,7 @@
+node_modules
+bun.lock
+.DS_Store
+cache
+dist
+.claude
+CLAUDE.md

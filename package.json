@@ -1,0 +1,28 @@
+{
+  "name": "ai-blog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "typecheck": "tsgo --noEmit",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@typescript/native-preview": "^7.0.0-dev.20260129.1",
+    "autoprefixer": "^10.4.23",
+    "gray-matter": "^4.0.3",
+    "markdown-it-plantuml": "^1.4.1",
+    "oxfmt": "^0.27.0",
+    "oxlint": "^1.42.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vitepress": "^2.0.0-alpha.15",
+    "vitepress-plugin-group-icons": "^1.7.1",
+    "vitepress-plugin-mermaid": "^2.0.17"
+  }
+}

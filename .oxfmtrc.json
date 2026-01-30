@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": ["**/node_modules/**", "**/dist/**", "**/.vitepress/cache/**"],
+  "printWidth": 100,
+  "singleQuote": true,
+  "semi": false,
+  "experimentalTailwindcss": {
+    "config": "tailwind.config.js",
+    "functions": ["clsx", "cn", "cva", "tw"]
+  },
+  "experimentalSortImports": {}
+}
